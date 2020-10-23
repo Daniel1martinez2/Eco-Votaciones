@@ -12,7 +12,6 @@ const database = firebase.database();
 
 var people= []; 
 var votados = []; 
-////////
 cuento= (user, votos)=>{ 
     
     let urna =[]; 
@@ -38,10 +37,17 @@ cuento= (user, votos)=>{
     console.log(efe); 
 return efe; 
 }
-//>>>>>>>
-votaciones.addEventListener('click', ()=>{
 
-    //alert(people + '\n'+ votados); 
+candidatos.addEventListener('click', ()=>{
+    let candi = ''; 
+    people.forEach(elem =>{
+        candi = candi + elem.name +'\n'
+    }); 
+   console.log(candi);
+   alert(candi); 
+}); 
+
+votaciones.addEventListener('click', ()=>{
    alert( cuento(people, votados)); 
    
 }); 
@@ -79,16 +85,4 @@ database.ref('Votos').on('value',(data)=>{
     });
 }); 
 
-
-
-
-
-
-
-var z = [{id:"a"}, {id:"e"} , {id:"g"}, {id:"h"}]; 
-var y = [{id:"a"},{id:"a"}, {id:"a"}, {id:"a"}, 
-{id:"e"}, {id:"e"}, {id:"e"}, {id:"e"}, {id:"e"}
-, {id:"e"}, {id:"g"}]; 
-
-cuento(z, y); 
 
