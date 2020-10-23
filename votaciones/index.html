@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votaciones</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+
+
+    <h3>Votaciones 2020</h3>
+    <footer class="info">
+        <button class="infoBoton candidatos"> candidatos</button>
+        <button class="infoBoton votaciones">Votaciones</button>
+    </footer>
+
+    <div class="form">
+
+        <div class="candidato">
+            <input type="text" placeholder="id" class="id creado texto">
+            <input type="text" placeholder="Nombre" class="nombre texto">
+            <div class="boton">
+                <button class="submit infoBoton">enviar</button>
+
+            </div>   
+        </div>
+        <div class="voto">
+            <input type="text" placeholder="id" class="id votado">
+            <button class="submitVote infoBoton">Votar</button>
+
+        </div>
+      
+
+    </div>
+</body>
+</html>
+
+   
+ 
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase.js"></script>
+
+
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyCLjz64kCorNjRDA5DD53ItOGwGds7kMqE",
+    authDomain: "ecosemana11.firebaseapp.com",
+    databaseURL: "https://ecosemana11.firebaseio.com",
+    projectId: "ecosemana11",
+    storageBucket: "ecosemana11.appspot.com",
+    messagingSenderId: "687042299675",
+    appId: "1:687042299675:web:dc20622e9861ef309b35be",
+    measurementId: "G-ET8SRZN7S7"
+  };
+  firebase.initializeApp(firebaseConfig);
+
+</script>
+
+<script src="index.js"></script>
+
